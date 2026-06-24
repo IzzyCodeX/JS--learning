@@ -535,10 +535,7 @@ console.log(checkGrade(7));
 
 // condition ? statement-if-true : statement-if-false; (ternary operator)
 
-function checkEqual(a, b) {
-    return a === b ? true : false;
-}
-console.log(checkEqual(20, 20));
+
 
 // ✅ Fixed - removed 'let' (just reassign)
 myName = true;
@@ -632,3 +629,35 @@ switch (vehicle) {
 }
 /* It logs "Some cars are 4x4." then falls through "Trucks can carry heavy loads." because there is no break statement after the "car" case,
 so it falls through to the "truck" case. */
+
+let day = "Saturday";
+
+switch (day) {
+  case "Saturday":
+  case "Sunday":
+    console.log("It's the weekend! 🎉");
+    break;
+  case "Monday":
+  case "Tuesday":
+  case "Wednesday":
+  case "Thursday":
+  case "Friday":
+    console.log("It's a weekday.");
+    break;
+  default:
+    console.log("Invalid day.");
+}
+
+function checkEqual(a, b) {
+    return a === b ? true : false;
+    console.log(checkEqual(a, b))
+}
+checkEqual(20, 20);
+
+const calculateArea = (width, height) => {
+  const area = width * height;
+  return area;
+};
+
+console.log(calculateArea(9, 4));
+// An example of an arrow function that calculates the area of a rectangle given its width and height.
