@@ -608,3 +608,27 @@ function dayFinder(dayOfWeek) {
     return answer;
 }
 console.log(dayFinder(5));
+
+const e = 2;
+if (1 == "1") {
+  let u = 3;
+  console.log(e + u);
+}
+console.log(e);
+
+let vehicle = "car";
+
+switch (vehicle) {
+  case "bike":
+    console.log("Bikes are two-wheelers.");
+    break;
+  case "car":
+    console.log("Some cars are 4x4.");
+  case "truck":
+    console.log("Trucks can carry heavy loads.");
+    break;
+  default:
+    console.log("Unknown vehicle.");
+}
+/* It logs "Some cars are 4x4." then falls through "Trucks can carry heavy loads." because there is no break statement after the "car" case,
+so it falls through to the "truck" case. */
