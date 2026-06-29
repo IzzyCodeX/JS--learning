@@ -303,48 +303,7 @@ function soccerScore2(goal) {  // ✅ Renamed
 console.log(soccerScore2(3));
 
 // Switch statement (Faculty finder)
-function facultyFinder(dept) {
-    let answer = "";
-    switch (dept) {
-        case "CSC":
-        case "SEN":
-        case "DTS":
-        case "CYS":
-        case "IFS":
-        case "IFT":
-            answer = "SOC";
-            break;
-        case "MME":
-        case "MNE":
-        case "MEE":
-        case "AGE":
-        case "EEE":
-        case "CPE":
-        case "ICE":
-        case "IPE":
-        case "BME":
-        case "CVE":
-            answer = "SEET";
-            break;
-        case "MBBS":
-        case "PBH":
-        case "MLS":
-        case "ANA":
-            answer = "SBMS";
-            break;
-        case "PHY":
-        case "MTS":
-        case "CHE":
-        case "STA":
-            answer = "SPS";
-            break;
-        default:
-            answer = "Not Registered";
-            break;
-    }
-    return answer;
-}
-console.log(facultyFinder("CVE"));
+
 
 // Functions
 function greater(a, b) {
@@ -661,3 +620,57 @@ const calculateArea = (width, height) => {
 
 console.log(calculateArea(9, 4));
 // An example of an arrow function that calculates the area of a rectangle given its width and height.
+
+function calculateArea2(width, height) {
+    const area2 = width * height;
+    return area2;
+}
+console.log(calculateArea2(30, 29));
+
+let multiply = (a, b = 1) => a * b;
+
+console.log(multiply(5));
+console.log(multiply(5, 2));
+
+function calculateSum(num1, num2) {
+  return num1 + num2;
+}
+
+console.log(calculateSum(2, 5));
+console.log(calculateSum(10, 10));
+console.log(calculateSum(5, 5));
+
+function calculateDifference(num1, num2) {
+  return num1 - num2;
+}
+
+console.log(calculateDifference(22, 5));
+console.log(calculateDifference(12, 1));
+console.log(calculateDifference(17, 9));
+
+function calculateProduct(num1, num2) {
+  return num1 * num2;
+}
+
+console.log(calculateProduct(13, 5));
+
+function calculateQuotient(num1, num2) {
+  return num2 === 0 ? "Error: Division by zero" : num1 / num2;
+}
+
+console.log(calculateQuotient(7, 11));
+console.log(calculateQuotient(3, 0));
+
+function calculateSquare(num) {
+  return num ** 2;
+}
+
+console.log(calculateSquare(2));
+console.log(calculateSquare(9));
+
+function calculateSquareRoot(num) {
+  return Math.sqrt(num);
+}
+
+console.log(calculateSquareRoot(25))
+console.log(calculateSquareRoot(100))
