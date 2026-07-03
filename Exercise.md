@@ -42,9 +42,6 @@ Task:
 ### Use document.getElementById to display the result of each operation in the UI. Ensure you have an HTML element with the appropriate ID to show the results.
 
 
-
-
-
 *Work on 4, 5 and 6 for as assigment to be submitted tommorow morning*
 
 #### 4 Function to Multiply a Number by Itself (Square a Number)
