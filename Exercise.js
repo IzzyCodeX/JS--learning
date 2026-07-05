@@ -49,3 +49,10 @@ function squareNum (num){
 
 console.log(squareNum(4));
 
+function areaOfRectangle (len, bre){
+    return len * bre;
+} 
+console.log(areaOfRectangle(5, 9));
+
+
+
