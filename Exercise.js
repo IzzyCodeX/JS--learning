@@ -43,3 +43,9 @@ function greetUser(name){
  }
 console.log(logDataType("16"))
 
+function squareNum (num){
+    return num * num ;
+}
+
+console.log(squareNum(4));
+
