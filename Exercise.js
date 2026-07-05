@@ -9,6 +9,12 @@ let mySelf = {
 };
 let goodnights = ["Gute Nacht", "Bonne nuit", "Buenas noches", "Oyasumi"];
 
+console.log(typeof(string));
+console.log(typeof(number));
+console.log(typeof(isActive));
+console.log(typeof(mySelf));
+console.log(typeof(goodnights));
+
 
 
 function takeSum(a, b){
@@ -35,5 +41,5 @@ function greetUser(name){
  function logDataType(value){
     return typeof value;
  }
-console.log(logDataType(true))
+console.log(logDataType("16"))
 
