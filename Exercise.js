@@ -54,5 +54,8 @@ function areaOfRectangle (len, bre){
 } 
 console.log(areaOfRectangle(5, 9));
 
-
+function minToSec(min){
+    return min*60;
+}
+console.log(minToSec(60))
 
