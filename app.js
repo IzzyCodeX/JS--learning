@@ -740,3 +740,13 @@ function truncateString (str, num){
 }
 
 console.log (truncateString("Adelusi Oluwanifemi Israel",  20));
+
+// confirming the ending of a string
+function confirmEnding (par1, par2){
+  if (par1.slice(-par2.length) === par2){
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(confirmEnding("Lionel Messi", "Messi"))
