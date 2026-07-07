@@ -675,6 +675,7 @@ function calculateSquareRoot(num) {
 console.log(calculateSquareRoot(25))
 console.log(calculateSquareRoot(100))
 
+// loan eligibility validator
 const minIncomeForDuplex = 60000;
 const minCreditScoreForDuplex = 700;
 
@@ -705,6 +706,8 @@ console.log(condoLoanMsg);
 console.log(carLoanMsg);
 console.log(noLoanMsg);
 
+
+// Leap year function
 function isLeapYear (num){
   if (year % 400 === 0){
     return true; 
