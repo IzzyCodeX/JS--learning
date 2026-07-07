@@ -724,4 +724,19 @@ function isLeapYear (num){
 }
 
 const year = 2050;
-console.log(isLeapYear(year))
+console.log(isLeapYear(year)) 
+
+// Truncating a string 
+
+function truncateString (str, num){
+  if (str.length > num){
+    
+    let cutText = str.slice(0, num);
+
+    return cutText + "...";
+  } else {
+    return str;
+  }
+}
+
+console.log (truncateString("Adelusi Oluwanifemi Israel",  20));
