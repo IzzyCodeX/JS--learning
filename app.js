@@ -704,3 +704,21 @@ console.log (duplexLoanMsg);
 console.log(condoLoanMsg);
 console.log(carLoanMsg);
 console.log(noLoanMsg);
+
+function isLeapYear (num){
+  if (year % 400 === 0){
+    return true; 
+  }
+  else if (year % 100 === 0){
+    return false;
+  }
+  else if (year % 4 === 0){
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+const year = 2050;
+console.log(isLeapYear(year))
