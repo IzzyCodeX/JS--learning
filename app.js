@@ -750,3 +750,12 @@ function confirmEnding (par1, par2){
   }
 }
 console.log(confirmEnding("Lionel Messi", "Messi"))
+
+
+//Lunch picker program
+let lunches = []
+function addLunchToEnd (arr, str){
+  arr.push(str);
+  console.log(`${str} added  to the end of the lunch menu.`);
+  return arr;
+}
