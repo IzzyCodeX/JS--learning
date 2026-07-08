@@ -765,3 +765,9 @@ function addLunchToStart (arr, str){
   console.log(`${str} added to the start of the lunch menu.`);
   return arr;
 }
+
+function removeLastLunch (arr){
+  let removed = arr.pop();
+  console.log(`${removed} removed from the end of the lunch menu.`)
+  return arr;
+}
