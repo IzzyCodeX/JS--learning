@@ -759,3 +759,9 @@ function addLunchToEnd (arr, str){
   console.log(`${str} added  to the end of the lunch menu.`);
   return arr;
 }
+
+function addLunchToStart (arr, str){
+  arr.unshift(str);
+  console.log(`${str} added to the start of the lunch menu.`);
+  return arr;
+}
