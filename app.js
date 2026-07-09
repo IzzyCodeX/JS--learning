@@ -807,3 +807,8 @@ function showLunchMenu (arr) {
         console.log("The menu is empty.")
     }
 }
+
+console.log (showLunchMenu(lunches))
+console.log(addLunchToEnd(lunches, "Semo"))
+console.log(addLunchToStart(lunches, "Bread"))
+console.log(addLunchToEnd(lunches, "Bigi apple"))
