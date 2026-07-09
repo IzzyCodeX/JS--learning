@@ -23,10 +23,13 @@ a = a + 1;
 b = b + 5;
 c = c + 67;
 console.log(c);
+
+
 let izzyCodex;
 let bestBro;
 izzyCodex = 80;
-// 
+
+
 let sum = 52 + 48;
 console.log(sum);
 let diff = 60 * 30;
@@ -78,10 +81,12 @@ izzyCodex = "Love❤️";
 my = izzyCodex.length;
 console.log(my);
 console.log(izzyCodex);
+
 my = izzyCodex[0];
 console.log(my);
 // my=izzyCodex[4]
 console.log(my);
+
 // ✅ Fixed - removed 'let' (just reassign)
 izzyCodex = "Love❤️";
 let me = izzyCodex[izzyCodex.length - 3];
@@ -167,7 +172,7 @@ function trueOrFalse(wasThatTrue) {
 }
 console.log(trueOrFalse(false));
 
-function trueOrFalse2(isItTrue) {  // ✅ Renamed to avoid conflict
+function trueOrFalse2(isItTrue) {
     if (isItTrue) {
         return "Yes, it is true";
     }
@@ -214,7 +219,6 @@ function tst(num) {
 }
 console.log(tst(25));
 
-// ✅ Fixed - renamed to avoid conflict with later declaration
 let goalNames = ["Goal", "Brace", "Hat-trick"];
 
 function soccerScore(goal) {
@@ -230,7 +234,7 @@ function soccerScore(goal) {
 }
 console.log(soccerScore(2));
 
-function stateCapitalFinder(destination) {  // ✅ Renamed to avoid conflict
+function stateCapitalFinder(destination) { 
     let place = "";
     switch (destination) {
         case 1:
@@ -252,7 +256,7 @@ console.log(stateCapitalFinder(9));
 
 console.log("Node is working");
 
-function Intro2(name, age, stateOfOrigin, hobby) {  // ✅ Renamed to avoid conflict
+function Intro2(name, age, stateOfOrigin, hobby) {
     let results = "";
     results = "My name is " + name + " I am " + age + " years old, I am from " + stateOfOrigin + " state and I love " + hobby + ".";
     return results;
@@ -264,9 +268,9 @@ var b2 = 10;
 a2 = b2;
 console.log(a2 + b2);
 
-let name2 = "Israel";  // ✅ Renamed to avoid conflict
+let name2 = "Israel"; 
 let age2 = 17;
-let stateOfOrigin2 = "Ekiti";  // ✅ Renamed to avoid conflict
+let stateOfOrigin2 = "Ekiti"; 
 console.log("My name is " + name2 + " I am " + age2 + " years old and I am from " + stateOfOrigin2 + " state.");
 
 // Grade Finder
@@ -288,8 +292,7 @@ function gradeFinder(score) {
 console.log(gradeFinder(43));
 
 // Logical operators
-// ✅ Fixed - removed duplicate 'let' and used existing goalNames
-function soccerScore2(goal) {  // ✅ Renamed
+function soccerScore2(goal) { 
     if (goal == 1) {
         return goalNames[0];
     }
@@ -355,7 +358,7 @@ function stateAndCapital(val) {
 }
 console.log(stateAndCapital("lagos"));
 
-var stateData = {  // ✅ Renamed to avoid conflict
+var stateData = {  
     "abia": "umahia",
     "adamawa": "yola",
     "akwa-ibom": "uyo",
@@ -396,7 +399,7 @@ var mySelf = [{
         "SSCE",
     ]
 }];
-var myArray2 = [];  // ✅ Renamed to avoid conflict
+var myArray2 = [];
 
 // while loop
 var i = 0;
@@ -409,7 +412,7 @@ for (var i = 1; i < 7; i++) {
     myArray2.push(i);
 }
 console.log(myArray2);
-var ourArray2 = [];  // ✅ Renamed to avoid conflict
+var ourArray2 = [];
 for (var i = 9; i > 0; i -= 2) {
     ourArray2.push(i);
 }
@@ -496,7 +499,7 @@ console.log(checkGrade(7));
 
 
 
-// ✅ Fixed - removed 'let' (just reassign)
+
 myName = true;
 console.log(typeof myName);
 
@@ -812,3 +815,22 @@ console.log (showLunchMenu(lunches))
 console.log(addLunchToEnd(lunches, "Semo"))
 console.log(addLunchToStart(lunches, "Bread"))
 console.log(addLunchToEnd(lunches, "Bigi apple"))
+
+
+// golf score translator
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+function golfScore (par, strokes){
+    if (strokes == 1){
+        return names[0];
+    } else if (strokes <= par -2){
+        return names[1];
+    } else if (strokes == par -1){
+        return names[2];
+    } else if (strokes == par){
+        return names[3];
+    } else if (strokes == par +1){
+        
+    }
+}
+
