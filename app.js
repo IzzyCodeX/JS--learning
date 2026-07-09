@@ -756,7 +756,7 @@ console.log(confirmEnding("Lionel Messi", "Messi"))
 let lunches = []
 function addLunchToEnd (arr, str){
   arr.push(str);
-  console.log(`${str} added  to the end of the lunch menu.`);
+  console.log(`${str} added to the end of the lunch menu.`);
   return arr;
 }
 
@@ -779,7 +779,7 @@ function removeLastLunch (arr){
 
 function removeFirstLunch (arr){
     if (arr.length === 0){
-        console.log("No lunches to remove")
+        console.log("No lunches to remove.")
         return arr;
     }  else {
         let removed = arr.shift();
@@ -790,7 +790,7 @@ function removeFirstLunch (arr){
 
 function getRandomLunch(arr){
     if (arr.length === 0){
-      console.log("No lunches to remove")
+      console.log("No lunches available.")
       return arr;
     } else {
         let random = arr[Math.floor(Math.random() * arr.length)];
@@ -800,5 +800,10 @@ function getRandomLunch(arr){
 }
 
 function showLunchMenu (arr) {
-    
+    if (arr.length > 0) {
+        console.log("Menu items: " + arr.join(", "))
+        return arr;
+    }  else {
+        console.log("The menu is empty.")
+    }
 }
