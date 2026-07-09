@@ -767,7 +767,38 @@ function addLunchToStart (arr, str){
 }
 
 function removeLastLunch (arr){
-  let removed = arr.pop();
-  console.log(`${removed} removed from the end of the lunch menu.`)
-  return arr;
+  if (arr.length === 0 ){
+    console.log("No lunches to remove.")
+    return arr;
+  } else {
+    let removed = arr.pop();
+    console.log(`${removed} removed from the end of the lunch menu.`)
+    return arr;
+  }
+}
+
+function removeFirstLunch (arr){
+    if (arr.length === 0){
+        console.log("No lunches to remove")
+        return arr;
+    }  else {
+        let removed = arr.shift();
+        console.log(`${removed} removed from the start of the lunch menu.`)
+        return arr;
+    }
+}
+
+function getRandomLunch(arr){
+    if (arr.length === 0){
+      console.log("No lunches to remove")
+      return arr;
+    } else {
+        let random = arr[Math.floor(Math.random() * arr.length)];
+        console.log(`Randomly selected lunch: ${random}`)
+        return arr
+    }
+}
+
+function showLunchMenu (arr) {
+    
 }
