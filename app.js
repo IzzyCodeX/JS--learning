@@ -838,3 +838,17 @@ function golfScore (par, strokes){
     }
 }
 
+// A way too long words problem
+
+function shortWord (word){
+    if (word.length <= 10){
+        return word;
+    }
+
+    const first = word[0];
+    const last  = word[word.length-1];
+    const count = word.length-2;
+    
+    return first + count + last;
+}
+console.log(shortWord("ComputerScience"))
