@@ -840,15 +840,16 @@ function golfScore (par, strokes){
 
 // A way too long words problem
 
-function shortWord (word){
-    if (word.length <= 10){
-        return word;
+function  word(input){
+    if (input.length <= 10){
+        return input;
     }
 
-    const first = word[0];
-    const last  = word[word.length-1];
-    const count = word.length-2;
+    const first = input[0];
+    const last  = input[input.length-1];
+    const middle = input.length-2;
     
-    return first + count + last;
+    return first + middle + last;
 }
-console.log(shortWord("ComputerScience"))
+console.log(word("ComputerScience"))
+
