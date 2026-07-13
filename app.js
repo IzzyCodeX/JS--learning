@@ -853,3 +853,12 @@ function  word(input){
 }
 console.log(word("ComputerScience"))
 
+
+//concat() method
+
+const originalArray = [1, 2, 3];
+const copyArray = ["Izzy"].concat(originalArray);
+
+console.log(copyArray);
+console.log(copyArray === originalArray);
+
