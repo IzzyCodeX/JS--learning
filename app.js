@@ -947,7 +947,7 @@ function validateManifest (manifest){
     errors.destination = "Missing";
   } else if(typeof manifest.destination !== 'string'){
     errors.destination = "Invalid";
-  } else if(manifest.destination.trim() == ''){
+  } else if(manifest.destination.trim() === ''){
     errors.destination = "Invalid";
   }
 
@@ -963,7 +963,7 @@ function validateManifest (manifest){
     errors.unit = "Missing";
   } else if(typeof manifest.unit !== 'string'){
     errors.unit = "Invalid";
-  } else if(!manifest.unit == "lb" || !manifest.unit == "kg"){
+  } else if (manifest.unit !== "lb" && manifest.unit !== "kg") {
     errors.unit = "Invalid";
   }
 
@@ -984,7 +984,7 @@ const processManifest = (manifest) => {
     const normalized = normalizeUnits(manifest);
     console.log(`Total weight: ${normalized.weight} kg`);
   } else {
-    console.log (`Validation error: ${manifest.containerId}`);
+    console.log(`Validation error: ${manifest.containerId}`);
     console.log(errors);
   }
 }
