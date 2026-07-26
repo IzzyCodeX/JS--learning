@@ -989,3 +989,5 @@ const processManifest = (manifest) => {
   }
 }
 
+console.log('Normalize (150lb):',
+     normalizeUnits({weight: 150, unit:"lb"}));
