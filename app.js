@@ -982,7 +982,7 @@ const processManifest = (manifest) => {
   if(Object.keys(errors).length === 0){
     console.log(`Validation success: ${manifest.containerId}`);
     const normalized = normalizeUnits(manifest);
-    console.log(`Total weight: ${normalizeUnits} kg`);
+    console.log(`Total weight: ${normalized.weight} kg`);
   } else {
     console.log (`Validation error: ${manifest.containerId}`);
     console.log(errors);
