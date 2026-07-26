@@ -14,7 +14,6 @@ let ourName = "IzzyCodex";  // ✅ Changed comma to semicolon
 const pi = 3.14;
 var a;
 var b = 2;
-
 a = 7;
 b = a;
 console.log(a);
@@ -920,3 +919,73 @@ const getProperty = (animal, propertyName) => {
 
 console.log(getProperty(tiger, "species"))
 console.log(getProperty(elephant, "age"))
+
+// Manifest validator from FCC
+
+function normalizeUnits(manifest){
+  const newManifest = {...manifest};
+  if (manifest.unit == "lb"){
+    newManifest.weight = manifest.weight * 0.45 ;
+    newManifest.unit = "kg"; 
+  }
+
+  return newManifest;
+}
+
+function validateManifest (manifest){
+  const errors = {};
+
+  if(!manifest.hasOwnProperty("containerId")){
+    errors.containerId = "Missing";
+  } else if(typeof manifest.containerId !== 'number'){
+    errors.containerId = "Invalid";
+  } else if(!Number.isInteger(manifest.containerId) || manifest.containerId <= 0){
+    errors.containerId = "Invalid";
+  }
+
+  if(!manifest.hasOwnProperty("destination")){
+    errors.destination = "Missing";
+  } else if(typeof manifest.destination !== 'string'){
+    errors.destination = "Invalid";
+  } else if(manifest.destination.trim() == ''){
+    errors.destination = "Invalid";
+  }
+
+  if(!manifest.hasOwnProperty("weight")){
+    errors.weight = "Missing";
+  } else if(typeof manifest.weight !== 'number'){
+    errors.weight = "Invalid";
+  } else if(isNaN(manifest.weight) || manifest.weight <= 0){
+    errors.weight = "Invalid";
+  }
+
+  if(!manifest.hasOwnProperty("unit")){
+    errors.unit = "Missing";
+  } else if(typeof manifest.unit !== 'string'){
+    errors.unit = "Invalid";
+  } else if(!manifest.unit == "lb" || !manifest.unit == "kg"){
+    errors.unit = "Invalid";
+  }
+
+  if(!manifest.hasOwnProperty("hazmat")){
+    errors.hazmat = "Missing";
+  } else if(typeof manifest.hazmat !== 'boolean'){
+    errors.hazmat = "Invalid";
+  }
+
+  return errors;
+}
+
+const processManifest = (manifest) => {
+  const errors = validateManifest(manifest);
+
+  if(Object.keys(errors).length === 0){
+    console.log(`Validation success: ${manifest.containerId}`);
+    const normalized = normalizeUnits(manifest);
+    console.log(`Total weight: ${normalizeUnits} kg`);
+  } else {
+    console.log (`Validation error: ${manifest.containerId}`);
+    console.log(errors);
+  }
+}
+
